@@ -70,12 +70,13 @@ echo base64_encode(json_encode($default_data));
 ?>
 
 </body>
+
 </html>
 ```
 This is one of the way to create the cookie by using php. The result of the strings comes out to be  `eyJzaG93cGFzc3dvcmQiOiJubyIsImJnY29sb3IiOiIjZmZmZmZmIn0=`. After that we could use cyberchef to reverse the encrypted cookie with the cookie that we have to get the key of the encryption. 
 ![](https://beta.appflowy.cloud/api/file_storage/0535e7ca-62b3-4f1c-b53c-bb4dd6534174/v1/blob/dd1c17ac%2D016d%2D44d2%2D970e%2D601f034bb2ae/ykS0Z0HFcp7plxht4YVX410iy3e0H0fQ1FguvJiVdmc=.png)
 After done reversing the encryption, we are left with the key of the encryption which is `eDWo` repeating. With the key now available to us, we could easily manipulate the cookie for the password.
 ![](https://beta.appflowy.cloud/api/file_storage/0535e7ca-62b3-4f1c-b53c-bb4dd6534174/v1/blob/dd1c17ac%2D016d%2D44d2%2D970e%2D601f034bb2ae/rBLwL_nxkBs4NNanavo_JKlT3Cj8AhPzRATt0mtkXLs=.png)
-The new cookie is now HmYkBwozJw4WNyAAFyB1VUc9MhxHaHUNAic4Awo2dVVHZzEJAyIxCUc5 . Now just need to replace the old one with this and we should be able to have access to the password
+The new cookie is now `HmYkBwozJw4WNyAAFyB1VUc9MhxHaHUNAic4Awo2dVVHZzEJAyIxCUc5` . Now just need to replace the old one with this and we should be able to have access to the password
 ![](https://beta.appflowy.cloud/api/file_storage/0535e7ca-62b3-4f1c-b53c-bb4dd6534174/v1/blob/dd1c17ac%2D016d%2D44d2%2D970e%2D601f034bb2ae/FtRlFzR2MSqbuVa15s9MMjR39C_ltd4ktzB9-4OC0xg=.png)
 And there the password for the next level.
